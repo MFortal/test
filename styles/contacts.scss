@@ -1,0 +1,35 @@
+.page_contacts {
+  margin-bottom: 30px;
+}
+
+.page_contacts_item {
+  margin: 0 0 17px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  
+  &:last-child{
+    margin: 0;
+  }
+
+  .page_contacts_name {
+    font-weight: 700;
+    color: #000000;
+    padding-right: 5px;
+  }
+
+  a {
+    color: #007EEE;
+  }
+
+  .page_contacts_value {
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      color: #007EEE;
+      text-shadow: 0 0 0.5px #007EEE;
+    }
+  }
+
+
+}

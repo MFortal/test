@@ -1,0 +1,2261 @@
+/****** menu *******/
+
+@media screen and (min-width: 320px) and (max-width: 1299px) {
+  .header_nav {
+    position: fixed;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    z-index: 3;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+    ul {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+
+      li {
+        margin: 0 0 15px;
+
+        a {
+          color: #000;
+          padding: 10px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .header_nav_open {
+    padding-top: 85px;
+    height: 100vh;
+    overflow-y: auto;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s ease-out;
+  }
+
+  .no_scroll {
+    overflow: hidden;
+  }
+
+  .site-nav__curtain {
+    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(100%) scale(0);
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .curtain-up {
+    animation-name: curtainUp;
+  }
+
+  .curtain-down {
+    animation-name: curtainDown;
+  }
+
+  @keyframes curtainUp {
+    0% {
+      border-radius: 50%;
+      transform: translateY(100%) scale(1);
+      visibility: visible;
+      opacity: 1;
+    }
+
+    50% {
+      border-radius: 50%;
+    }
+
+    100% {
+      transform: translateY(0%) scale(3, 1);
+      visibility: visible;
+      opacity: 1;
+      border-radius: 0;
+    }
+  }
+
+  @keyframes curtainDown {
+    0% {
+      border-radius: 0;
+      transform: translateY(0%) scale(3, 1);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    50% {
+      opacity: 1;
+      visibility: visible;
+      border-radius: 50%;
+    }
+
+    99% {
+      transform: translateY(100%) scale(0);
+      visibility: visible;
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(100%) scale(0);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  /*end menu*/
+
+  .registration_btn.reg_mobail_btn {
+    display: flex;
+    margin: auto auto 0;
+    background: none;
+    color: #007eee;
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+
+  .user_panel {
+    width: 90vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    margin: 0 auto 25px;
+
+    .user_link {
+      display: block;
+      width: 28px;
+      height: 28px;
+      margin: 0 7px 0 0;
+      position: relative;
+    }
+
+    .favorites {
+      background: url(/images/favorites.svg) no-repeat bottom;
+    }
+
+    .notifications {
+      background: url(/images/notifications.svg) no-repeat bottom;
+      width: 23px;
+      //margin-right: 12px;
+    }
+
+    .user {
+      background: url(/images/user.svg) no-repeat bottom;
+      margin: 0;
+    }
+
+    .notifications_active {
+      position: absolute;
+      display: block;
+      width: 14px;
+      height: 14px;
+      top: 3px;
+      right: -3px;
+      background: url(/images/notifications_active.svg) no-repeat;
+      pointer-events: none;
+    }
+  }
+
+  .user_panel_desktop {
+    display: none;
+  }
+
+  .mobail_contacts {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding: 15px 0 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin-right: auto;
+
+    a,
+    span {
+      display: block;
+      margin: 0 0 10px;
+      color: #12222d;
+      transition: all 0.3s ease-out;
+      text-align: center;
+    }
+  }
+
+  .humb {
+    display: flex !important;
+  }
+}
+
+/****** end menu *******/
+
+@media screen and (min-width: 320px) and (max-width: 1299px) {
+  .grid_container {
+    width: 100%;
+    padding: 0 5vw;
+  }
+
+  header {
+    background: #ffffff;
+    box-shadow: 0px 4px 22px rgba(153, 153, 153, 0.25);
+    z-index: 5;
+    position: relative;
+
+    .header_top {
+      padding: 10px 0;
+      background: #fff;
+      z-index: 99999;
+      position: relative;
+    }
+  }
+
+  .header_logo {
+    margin: 0 10px 0 0;
+    z-index: 99;
+  }
+
+  .header_contacts {
+    display: none;
+  }
+
+  .registration_btn {
+    display: none;
+  }
+
+  /*banner*/
+
+  .banner_item {
+    width: 100%;
+    min-height: 455px;
+    padding: 20px;
+
+    .banner_item_title {
+      font-size: 30px;
+    }
+  }
+
+  .banner {
+    padding-bottom: 30px;
+
+    .swiper {
+      padding-bottom: 25px;
+    }
+
+    .swiper-pagination {
+      top: auto !important;
+      bottom: -5px !important;
+    }
+  }
+
+  /*btn_site*/
+
+  .btn_site {
+  }
+
+  .margin_bottom {
+    margin-bottom: 35px;
+  }
+
+  /*category_index*/
+
+  .category_index {
+    padding: 30px 0 35px;
+  }
+
+  .category_wrap {
+    margin: 0 0 20px;
+  }
+
+  .category_item {
+    width: calc(50% - 7px);
+    margin: 0 14px 14px 0;
+    padding: 15px 10px;
+    flex-flow: column;
+
+    &:nth-child(2n + 2) {
+      margin: 0 0 14px;
+    }
+
+    .category_item_img {
+      margin: 0 0 10px;
+
+      img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    .category_item_name {
+      flex-grow: 1;
+      width: 100%;
+      font-size: 14px;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .title_site {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  /*hottest_auctions*/
+
+  .hottest_auctions {
+    .btn_site.btn_site_white {
+      display: none;
+    }
+
+    .catalog_lots_sorting {
+      display: block;
+      margin: 25px 0 0 auto;
+
+      .sorting_price {
+        margin: 0;
+      }
+    }
+  }
+
+  .auction_card {
+    width: 100%;
+    margin: 0 0 15px;
+
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+
+  .auction_card_title {
+    margin-bottom: 20px;
+    font-size: 17px;
+    // line-height: 1.3;
+    margin: 0 0 15px;
+  }
+
+  .auction_card_top {
+    height: 150px;
+
+    .box_border {
+      padding: 8px 15px;
+    }
+  }
+
+  .card_info__item {
+    margin: 0 0 10px;
+  }
+
+  .auction_card_favorites,
+  .auction_card .auction_card_status {
+    box-shadow: 0px 1px 4px rgb(0 65 203 / 20%);
+  }
+
+  .btn_mobail {
+    min-width: 100%;
+  }
+
+  .index_map_wrap {
+    background-position: center;
+
+    .btn_site {
+      min-width: 100%;
+    }
+  }
+
+  .index_map_wrap .index_map_title {
+    font-size: 28px;
+    line-height: 1.3;
+    max-width: 90%;
+  }
+
+  /*favorites / catalog */
+
+  .catalog .auction_card:nth-child(n + 4),
+  .favorites .auction_card:nth-child(n + 4) {
+    display: block;
+  }
+
+  /*sellers*/
+
+  .sellers {
+    .swiper {
+      padding: 0 5vw;
+    }
+
+    .swiper-wrapper {
+      margin-left: 0;
+    }
+
+    .sellers_slide {
+      height: 300px;
+      padding: 35px;
+    }
+  }
+
+  .title_head {
+    margin-bottom: 25px;
+  }
+
+  /* blog */
+
+  .blog_index {
+    .btn_site.btn_site_white {
+      display: none;
+    }
+
+    .btn_mobail {
+      margin-bottom: 20px;
+    }
+  }
+
+  .blog_index_wrap {
+    margin: 0 0 25px;
+  }
+
+  .blog_index_item {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+
+  .blog_index_item_img {
+    height: auto;
+  }
+
+  .blog_index_item_wrap {
+    padding: 15px;
+  }
+
+  .blog_index_title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  /**** каталог ****/
+
+  .page_head {
+    padding: 40px 0;
+  }
+
+  .page_titile {
+    font-size: 28px;
+  }
+
+  .catalog_lots {
+    width: 100%;
+  }
+
+  .catalog_lots_head {
+    flex-flow: column-reverse;
+    align-items: flex-start;
+  }
+
+  .catalog_lots_sorting,
+  .lots_footer_info {
+    display: none;
+  }
+
+  .catalog_lots_number {
+    margin-top: 15px;
+  }
+
+  .lots_display_box,
+  .lots_display_map {
+    width: 25px;
+    height: 27px;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .catalog_lots_display {
+    width: 100%;
+  }
+
+  .btn_filter {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #282739;
+    margin-left: auto;
+    display: block;
+  }
+
+  .catalog_lots_footer {
+    justify-content: center;
+  }
+
+  .catalog_lots_footer .lots_footer_number {
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+
+  /*----страница лота---*/
+
+  .breadcrumb ul li:last-child {
+    margin: 0;
+  }
+
+  .card_head_left {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+
+  .card_top_slide {
+    height: 265px;
+  }
+
+  .card_bottom_slider {
+    display: none !important;
+  }
+
+  .card_top_slider .swiper-button-prev,
+  .card_top_slider .swiper-button-next {
+    width: 35px;
+    height: 35px;
+  }
+
+  .card_top_slider .swiper-button-prev:after,
+  .card_top_slider .swiper-button-next:after {
+    font-size: 19px;
+  }
+
+  .card_head {
+    margin-bottom: 25px;
+  }
+
+  .card_head_info {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .price_num {
+    font-size: 22px;
+  }
+
+  .card_info_price_box {
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+  }
+
+  .card_info_spec {
+    margin-bottom: 25px;
+  }
+
+  .card_spec_item {
+    width: 100%;
+    margin: 0 0 10px;
+
+    &:nth-child(2n + 2) {
+      padding: 0;
+      margin: 0 0 10px;
+    }
+  }
+
+  .btn_auctions {
+    margin-bottom: 15px;
+  }
+
+  .card_spec_box_title {
+    font-size: 24px;
+  }
+
+  .card_spec_items {
+    width: calc(50% - 10px);
+    margin: 0 20px 20px 0;
+
+    &:nth-child(2n + 2) {
+      margin: 0 0 20px;
+    }
+  }
+
+  .card_description_head,
+  .card_documents_title {
+    padding: 15px 35px 15px 55px;
+    background-position: 10px 50%;
+  }
+
+  .card_familiarization .card_description_head {
+    background-position: 10px 50%;
+  }
+
+  .resolve_issues_left {
+    width: 100%;
+    margin: 0 0 25px;
+    padding: 25px 15px;
+  }
+
+  .resolve_issues_title {
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+
+  .resolve_issues_phone {
+    padding: 0 0 25px;
+    margin: 0 0 25px;
+  }
+
+  .resolve_issues_img {
+    height: 325px;
+  }
+
+  .resolve_issues_right {
+    width: 100%;
+    margin: 0;
+  }
+
+  /*********
+    услуги
+  *********/
+
+  .category_page {
+    padding-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  /******************
+    страница услуг
+  ******************/
+
+  .sigle_services {
+    padding-top: 30px;
+
+    h2 {
+      font-size: 22px;
+      line-height: 1.3;
+      margin: 0 0 15px;
+    }
+  }
+
+  .services_trigger {
+    padding: 30px 0 10px;
+  }
+
+  .confidence_title,
+  .services_triggers_title {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .services_trigger_item {
+    width: calc(50% - 5px);
+    margin: 0 10px 20px 0;
+
+    padding: 15px 8px;
+
+    &:nth-child(2n + 2) {
+      margin: 0 0 20px;
+    }
+  }
+
+  .services_trigger_img {
+    height: 75px;
+    margin-bottom: 16px;
+  }
+
+  .services_trigger_title {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .services_trigger_text {
+    font-size: 14px;
+  }
+
+  .confidence_item {
+    width: calc(50% - 5px);
+    margin: 0 10px 10px 0;
+    padding: 20px 15px;
+    min-height: 75px;
+
+    &:nth-child(2n + 2) {
+      margin: 0 0 10px;
+    }
+  }
+
+  .page_content_wrap {
+    h2 {
+      font-size: 22px;
+      margin: 0 0 10px;
+    }
+  }
+
+  /***********
+    контакты
+  ************/
+
+  .page_contacts_item {
+    line-height: 1.5;
+  }
+
+  .single_content .page_content_wrap h2 {
+    font-size: 22px;
+  }
+
+  .single_content .page_content_wrap h2:nth-child(n + 2) {
+    margin: 30px 0 20px;
+    font-size: 20px;
+  }
+
+  /*** вопрос ответ ***/
+
+  .accordeon_item_questions {
+    font-size: 15px;
+  }
+
+  .accordeon_item_questions .accordion__button {
+    padding-right: 30px;
+
+    &::after {
+      width: 20px;
+      height: 20px;
+
+      top: 10px;
+      right: 10px;
+
+      background-size: 12px;
+    }
+  }
+
+  /*** добавление лота ***/
+
+  .adding_lot_item {
+    margin-bottom: 25px;
+  }
+
+  .adding_lot_title {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+
+  .doc_upload_input_caption {
+    padding: 7px 90px 7px 18px;
+  }
+
+  .doc_upload_button {
+    width: 85px;
+  }
+
+  .doc_upload_clear {
+    right: -15px;
+  }
+
+  .adding_lot_btn_box .btn_site {
+    width: 100%;
+    margin: 0 0 16px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  /* Изменение личных данных */
+
+  .personal_data_item {
+    margin: 0 0 5px;
+
+    .label_box {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+
+    .label_box_wrap .label_box_border {
+      width: calc(50% - 5px);
+    }
+
+    input {
+      padding: 0 12px;
+      font-size: 14px;
+      height: 50px;
+    }
+  }
+
+  .personal_data_btn {
+    width: 100%;
+  }
+
+  /*----Комната торгов---*/
+
+  .trading_room_wrap {
+    flex-flow: row wrap;
+  }
+
+  .trading_room_left {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+
+    .card_top_slider .card_top_slide {
+      border-radius: 5px 5px 0 0;
+      height: 305px;
+    }
+  }
+
+  .trading_room_right {
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .trading_room_time_left {
+    width: 100%;
+
+    .bold {
+      display: inline-block;
+      padding: 0;
+    }
+  }
+
+  .trading_room_title {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .trading_room_info {
+    font-size: 15px;
+  }
+
+  .room_price_item:nth-child(n) {
+    width: calc(50% - 8px);
+    margin: 0 16px 20px 0;
+
+    &:nth-child(2n + 2) {
+      margin: 0 0 20px;
+    }
+  }
+
+  .room_price_item_num {
+    font-size: 18px;
+  }
+
+  .trading_room_spec_item:nth-child(n) {
+    width: calc(50% - 8px);
+    margin: 0 16px 20px 0;
+
+    &:nth-child(2n + 2) {
+      margin: 0 0 20px;
+    }
+  }
+
+  .trading_room_spec_title {
+    flex-grow: 1;
+  }
+
+  .wrap_height {
+    height: 375px;
+  }
+
+  .trading_history_text {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  /***footer***/
+
+  .footer_top {
+    padding: 35px 0 0;
+  }
+
+  .footer_contacts {
+    width: 100%;
+    margin: 0 0 50px;
+  }
+
+  .footer_top .footer_wrap {
+    border: none;
+  }
+
+  .footer_phone {
+    font-size: 30px;
+  }
+
+  footer .footer_btn {
+    min-width: 100%;
+  }
+
+  .footer_nav {
+    width: 100%;
+    margin: 0;
+  }
+
+  .footer_nav_title {
+    padding: 0 0 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0 0 20px;
+  }
+
+  .arrow_bottom {
+    background: url(/images/arrow_bottom.svg) no-repeat right;
+  }
+
+  .footer_nav_list {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+  }
+
+  .footer_nav_list.list_visible {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-out;
+  }
+
+  .footer_bottom {
+    padding: 10px 0;
+  }
+
+  .footer_link {
+    width: 50%;
+    margin: 0 0 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  /* карта в каталоге */
+
+  .catalog_map {
+    height: auto;
+    display: flex;
+    flex-flow: column-reverse;
+
+    .catalog_map_lots {
+      position: static;
+      width: 100%;
+      height: 0;
+      visibility: hidden;
+      opacity: 0;
+      display: none;
+      padding: 25px 8px 5px;
+
+      .catalog_lots_number {
+        margin-top: 0;
+      }
+
+      .auction_card:nth-child(n + 4) {
+        display: block;
+      }
+
+      .catalog_auctions_wrap {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .catalog_map_active {
+      height: auto;
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+  }
+
+  .card_spec_box_text .link_map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    padding: 0 45px;
+    width: 100%;
+    height: 48px;
+    background: #007eee;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 15px;
+    transition: all 0.3s ease-out;
+  }
+
+  /*форма связи*/
+
+  .form_question_left,
+  .form_question_right {
+    width: 100%;
+    padding: 30px 0;
+    position: relative;
+  }
+
+  .form_question_title {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .form_question_phone {
+    font-size: 20px;
+  }
+
+  .form_question_left::before {
+    width: 120vw;
+    left: -10vw;
+  }
+
+  .form_question_left::after {
+    background-size: 25%;
+    right: 5px;
+  }
+
+  .form_question_right::before {
+    width: 120vw;
+    right: -10vw;
+  }
+
+  .form_question_title2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .form_question_right input {
+    height: 48px;
+  }
+
+  .card_map_wrap {
+    height: 350px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .modal_register_login {
+    width: 90vw;
+    padding: 30px;
+
+    .register_box a {
+      font-size: 15px;
+      padding: 0 40px;
+    }
+  }
+
+  .modal_technical_support {
+    padding: 25px;
+
+    &_error {
+    }
+
+    .technical_support__title {
+      font-size: 22px;
+    }
+  }
+
+  .thank_modal {
+    padding: 25px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  /*filter*/
+
+  .react-numeric-input {
+    input {
+      text-align: left !important;
+    }
+  }
+
+  .react-numeric-input b {
+    display: none;
+  }
+
+  .filter_clouse {
+    position: absolute;
+    top: 35px;
+    right: 5vw;
+    width: 20px;
+    height: 20px;
+    background: url(/images/clouse.svg) no-repeat;
+    background-size: contain;
+    display: block;
+  }
+
+  .catalog_filter {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100%;
+    z-index: 99999;
+    background: #fff;
+    padding: 25px 5vw 25px;
+    margin: 0;
+    transition: all 0.3s ease-out;
+
+    .catalog_filter_box {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: 100vh;
+      padding-bottom: 150px;
+    }
+  }
+
+  .cat_filter_active {
+    left: 0;
+  }
+
+  /* end filter*/
+
+  .resolve_issues_link {
+    position: static;
+    margin: 15px 0 0;
+  }
+
+  /**** ЛК ****/
+
+  .personal_area {
+    padding-top: 35px;
+  }
+
+  .personal_area_wrap {
+    .personal_item_left {
+      width: 255px;
+    }
+
+    .personal_item_right {
+      width: calc(100% - 257px);
+      margin-left: auto;
+
+      .man {
+        height: auto;
+        bottom: -14px;
+        right: -5px;
+        object-position: bottom;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .personal_item {
+      width: 100%;
+      min-height: 80px;
+      margin: 0 0 10px;
+      padding: 15px;
+    }
+
+    .personal_name {
+      font-size: 21px;
+      line-height: 1.4;
+      margin: 0 0 5px;
+    }
+
+    .personal_subtitle {
+      margin: 0;
+    }
+
+    .auction,
+    .personal_item_balance {
+      width: calc(50% - 5px);
+      padding: 20px 15px;
+
+      .personal_item_num {
+        display: block;
+        font-size: 35px;
+        height: fit-content;
+      }
+
+      .personal_item_text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .personal_item_questions {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 22px;
+        background-size: contain;
+      }
+    }
+
+    .personal_item_balance {
+      font-size: 18px;
+
+      .item_balance_price {
+        font-size: 22px;
+      }
+    }
+
+    .personal_item_link {
+      width: calc(50% - 10px);
+      justify-content: flex-start;
+    }
+
+    .item_link_title {
+      font-size: 18px;
+    }
+
+    .personal_item_subtitle {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.4;
+
+      br {
+        display: none;
+      }
+    }
+
+    .personal_item_signature,
+    .personal_item_published,
+    .personal_item_link {
+      width: calc(50% - 5px);
+    }
+
+    .item_published_num {
+      font-size: 45px;
+      line-height: 60px;
+    }
+  }
+
+  .personal_technical_support .personal_item_info {
+    max-width: 70%;
+  }
+
+  .personal_item_img,
+  .personal_subscription .personal_item_img {
+    width: 27%;
+    position: static;
+    display: flex;
+    align-items: flex-end;
+
+    img {
+      position: static;
+    }
+  }
+
+  /**** end ЛК ****/
+
+  /**** Данные о лоте ****/
+
+  .adding_lot_item .input_wrap input {
+    padding-right: 65px;
+  }
+
+  .adding_lot_item .input_wrap .input_btn_map {
+    padding: 0 7px;
+    width: 50px;
+    font-size: 0;
+    background: url(/images/address.png) no-repeat center #eeeeee;
+    background-size: 25px;
+  }
+
+  .box__half .input_container {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+
+  /**** end Данные о лоте ****/
+
+  /**** Мои лоты ****/
+
+  .my_lots_tabs {
+    width: 100%;
+    overflow-x: scroll;
+
+    .scroll_wrap {
+      width: max-content;
+    }
+
+    .lots_tabs_item {
+      margin-right: 15px;
+    }
+  }
+
+  .lots_accordion_head .lots_accordion_title {
+    font-size: 20px;
+  }
+
+  .lots_accordion_head .lots_accordion_subtitle {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  .accordion_box_title {
+    display: none;
+  }
+
+  .my_lot_name,
+  .my_lot_days,
+  .my_lot_assigned_cost,
+  .my_lot_proposed_price {
+    width: 100%;
+    margin-bottom: 10px;
+    line-height: 1.4;
+
+    .my_lot_mobail_title {
+      display: block;
+      font-size: 13px;
+    }
+  }
+
+  .my_lot_days,
+  .my_lot_assigned_cost,
+  .my_lot_proposed_price {
+    width: calc(50% - 7px);
+    margin: 0 14px 10px 0;
+  }
+
+  .my_lot_assigned_cost {
+    margin-right: 0;
+  }
+
+  .my_lot_proposed_price {
+    margin-bottom: 0;
+  }
+
+  .my_lot_name {
+    .my_lot_mobail_title {
+      display: none;
+    }
+  }
+
+  .my_lot_wrap {
+    background: url(/images/accordion__button.png) calc(100% - 8px) 15px
+      no-repeat #f5f5f7;
+  }
+
+  .accordion__button[aria-expanded="true"] .my_lot_wrap {
+    background: url(/images/accordion__button_open.png) calc(100% - 8px) 15px
+      no-repeat #f5f5f7;
+  }
+
+  .my_lot_name_wrap {
+    align-items: flex-start;
+    padding-right: 15px;
+
+    .my_lot_name_icon {
+      margin-right: 15px;
+    }
+
+    .my_lot_name_title {
+      width: calc(100% - 50px);
+    }
+  }
+
+  .my_lot_content {
+    padding-right: 10px;
+  }
+
+  .my_lot_content .my_lot_status {
+    margin-bottom: 30px;
+    padding-left: 35px;
+    font-size: 16px;
+  }
+
+  .my_lot_content .my_lot_status::before {
+    top: -1px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+  }
+
+  .my_lot_content .my_lot_status::after {
+    left: 10px;
+    top: calc(50% + 17px);
+  }
+
+  .my_lot_status_prise {
+    display: block;
+  }
+
+  .my_auctions .boost_btn {
+    margin-left: 0;
+    font-size: 15px;
+  }
+
+  /**** end Мои лоты ****/
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .my_lot_days,
+  .my_lot_assigned_cost,
+  .my_lot_proposed_price {
+    width: calc(33.33% - 10px);
+    margin: 0 14px 10px 0;
+  }
+
+  .my_lot_proposed_price {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1299px) {
+  .grid_container {
+    padding: 0 4vw;
+  }
+
+  .category_item:nth-child(n) {
+    width: calc(25% - 11px);
+    margin: 0 14px 14px 0;
+    padding: 15px 10px;
+    flex-flow: column;
+
+    &:nth-child(4n + 4) {
+      margin: 0 0 14px;
+    }
+  }
+
+  .auction_card:nth-child(n) {
+    display: block;
+    width: calc(50% - 12px);
+    margin: 0 24px 24px 0;
+    border-radius: 0px 0px 5px 5px;
+    position: relative;
+
+    &:nth-child(2n + 2) {
+      margin: 0 0 24px;
+    }
+  }
+
+  .auction_card:nth-child(n + 5) {
+    display: none;
+  }
+
+  .index_map_wrap .btn_site,
+  .btn_mobail {
+    min-width: 30%;
+    margin: 0 auto;
+  }
+
+  .index_map_wrap .index_map_title {
+    font-size: 32px;
+    max-width: 75%;
+  }
+
+  .sellers .swiper-wrapper {
+    margin-left: -200px;
+  }
+
+  .sellers .sellers_slide {
+    height: 130px;
+    padding: 30px;
+  }
+
+  .blog_index_item {
+    width: calc(50% - 12px);
+    margin: 0 24px 0 0;
+
+    &:nth-child(2n + 2) {
+      margin: 0;
+    }
+
+    &:nth-child(n + 3) {
+      display: none;
+    }
+  }
+
+  .hottest_auctions .catalog_lots_sorting {
+    margin: 0;
+  }
+
+  /*каталог*/
+
+  .catalog_lots_sorting {
+    display: flex;
+  }
+
+  .catalog_lots_head {
+    flex-flow: row wrap;
+    align-items: baseline;
+  }
+
+  .catalog_lots_number {
+    margin: 0 0 15px;
+  }
+
+  .catalog_lots_sorting {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  .catalog_lots_footer .lots_footer_number {
+    margin-bottom: 0;
+  }
+
+  /*************
+   catalog_map
+  *************/
+
+  .catalog_map {
+    height: 575px;
+
+    .catalog_auctions_wrap {
+      padding-bottom: 30px;
+    }
+
+    .auction_card:nth-child(n + 5) {
+      display: block;
+    }
+  }
+
+  .catalog_map_points {
+    height: 100%;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+    }
+  }
+
+  /*----страница лота---*/
+
+  .card_head_left {
+    width: 45%;
+    margin: 0 20px 0 0;
+  }
+
+  .card_top_slide {
+    height: 315px;
+  }
+
+  .card_bottom_slider {
+    display: block !important;
+
+    .card_bottom_slide {
+      height: 70px;
+    }
+  }
+
+  .card_head_info {
+    width: calc(55% - 20px);
+  }
+
+  .card_info_price_box {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  .card_spec_item {
+    width: calc(50% - 7px);
+    margin: 0 14px 15px 0;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .card_spec_item .card_spec_value {
+    line-height: 1.3;
+  }
+
+  .card_info_spec {
+    margin-bottom: 20px;
+  }
+
+  .card_spec_box_title {
+    font-size: 30px;
+  }
+
+  .card_spec_items:nth-child(n) {
+    width: calc(25% - 15px);
+    margin: 0 20px 20px 0;
+
+    &:nth-child(4n + 4) {
+      margin: 0 0 20px;
+    }
+  }
+
+  .resolve_issues_left {
+    width: 50%;
+    margin: 0 25px 0 0;
+  }
+
+  .resolve_issues_title {
+    font-size: 24px;
+  }
+
+  .resolve_issues_right {
+    width: calc(50% - 25px);
+  }
+
+  .resolve_issues_img {
+    height: 255px;
+  }
+
+  /******************
+    страница услуг
+  ******************/
+
+  .confidence_title,
+  .services_triggers_title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .sigle_services h2 {
+    font-size: 24px;
+    margin: 0px 0px 20px;
+    max-width: 90%;
+  }
+
+  .services_trigger_item {
+    padding: 25px;
+    padding-right: 35px;
+  }
+
+  .services_trigger_title {
+    font-size: 18px;
+  }
+
+  .services_trigger_text {
+    font-size: 16px;
+  }
+
+  .confidence_item:nth-child(n) {
+    width: calc(25% - 8px);
+    margin: 0 10px 10px 0;
+    padding: 20px;
+    min-height: 85px;
+
+    &:nth-child(4n + 4) {
+      margin: 0 0 10px;
+    }
+  }
+
+  .form_question_left,
+  .form_question_right {
+    padding: 35px 0 40px;
+    position: relative;
+  }
+
+  .form_question_left::after {
+    background-size: contain;
+    height: 175px;
+    top: auto;
+    bottom: 0;
+  }
+
+  .form_question_phone {
+    a {
+      display: block;
+      margin-top: 5px;
+      z-index: 5;
+      position: relative;
+    }
+  }
+
+  .form_question_right {
+    padding-left: 25px;
+  }
+
+  .form_question_title2 {
+    font-size: 26px;
+  }
+
+  .form_question_right input {
+    height: 48px;
+  }
+
+  /********
+    блог
+  *********/
+
+  .blog_page {
+    .blog_index_item {
+      margin: 0 24px 24px 0;
+
+      &:nth-child(2n + 2) {
+        margin: 0 0 24px;
+      }
+    }
+
+    .blog_index_item:nth-child(n + 3) {
+      display: block;
+    }
+  }
+
+  /*** вопрос ответ ***/
+
+  .accordeon_item_questions .accordion__button {
+    padding-right: 50px;
+
+    &::after {
+      width: 25px;
+      height: 25px;
+
+      top: calc(50% - 14px);
+      right: 12px;
+
+      background-size: 12px;
+    }
+  }
+
+  /******
+     ЛК
+  *******/
+
+  .personal_area_wrap .personal_item {
+    // margin-bottom: 25px;
+  }
+
+  .personal_area_wrap .personal_item_left {
+    width: 455px;
+  }
+
+  .personal_area_wrap .personal_item_right {
+    width: calc(100% - 455px);
+  }
+
+  .personal_area_wrap .personal_item_right .man {
+    height: 150%;
+  }
+
+  .personal_area_wrap .personal_name {
+    font-size: 26px;
+  }
+
+  .personal_area_wrap .auction,
+  .personal_area_wrap .personal_item_balance {
+    width: calc(50% - 10px);
+    padding: 20px 15px;
+  }
+
+  .personal_area_wrap .auction .personal_item_num {
+    font-size: 64px;
+  }
+
+  .personal_area_wrap .auction .personal_item_text,
+  .personal_area_wrap .personal_item_balance .personal_item_text {
+    font-size: 16px;
+  }
+
+  .personal_area_wrap .personal_item_balance {
+    font-size: 20px;
+  }
+
+  .personal_area_wrap .item_balance_title {
+    line-height: 25px;
+  }
+
+  .personal_area_wrap .personal_item_balance .item_balance_price {
+    font-size: 24px;
+  }
+
+  .personal_area_wrap .personal_item_signature,
+  .personal_area_wrap .personal_item_published,
+  .personal_area_wrap .personal_item_link {
+    width: calc(25% - 15px);
+  }
+
+  .personal_area_wrap .item_link_title {
+    font-size: 20px;
+  }
+
+  .personal_area_wrap .personal_item_subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    max-width: 90%;
+  }
+
+  .personal_area_wrap .item_published_num {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .personal_area_wrap .personal_technical_support {
+    width: calc(50% - 12px);
+    margin-bottom: 5px;
+  }
+
+  .personal_technical_support .personal_item_info {
+    max-width: 72%;
+    margin-bottom: 5px;
+  }
+
+  /*** добавление лота ***/
+
+  .adding_lot_wrap {
+    max-width: 60%;
+  }
+
+  .adding_lot_btn_box .btn_site {
+    width: calc(50% - 12px);
+    margin: 0;
+    padding: 0 15px;
+  }
+
+  .doc_upload_clear {
+    right: -20px;
+  }
+
+  /* Изменение личных данных */
+
+  .personal_data_item .label_box {
+    width: calc(50% - 12px);
+    margin: 0 24px 24px 0;
+
+    &:nth-child(2n + 2) {
+      margin: 0 0 24px;
+    }
+  }
+
+  .personal_data_btn {
+    width: calc(50% - 12px);
+
+    .btn_site {
+      min-width: auto;
+    }
+  }
+
+  /*----Комната торгов---*/
+
+  .trading_room_time_left {
+    width: fit-content;
+  }
+
+  .trading_room_title {
+    font-size: 28px;
+  }
+
+  .trading_room_info {
+    font-size: 16px;
+  }
+
+  .room_price_item_num {
+    font-size: 22px;
+  }
+
+  /***footer***/
+
+  .footer_contacts,
+  .footer_nav {
+    width: 48%;
+  }
+
+  .footer_link {
+    width: auto;
+    margin: 0 0 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+  .header_contacts {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .hottest_auctions_wrap .auction_card:nth-child(n) {
+    display: block;
+    width: calc(33.333% - 16px);
+    margin: 0 24px 24px 0;
+
+    &:nth-child(3n + 3) {
+      margin: 0 0 24px;
+    }
+
+    .auction_card_title {
+      font-size: 15px;
+    }
+  }
+
+  .card_info__item {
+    width: calc(50% - 10px);
+    margin: 0 0 10px;
+  }
+
+  .index_map_wrap .index_map_title {
+    max-width: 60%;
+  }
+
+  .blog_index_item:nth-child(n) {
+    display: block;
+    width: calc(33.3333% - 16px);
+    margin: 0 24px 0 0;
+
+    &:nth-child(3n + 3) {
+      margin: 0;
+    }
+  }
+
+  .blog_index_item_img {
+    height: 170px;
+  }
+
+  .blog_index_title {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 10px;
+  }
+
+  .blog_index_text {
+    font-size: 15px;
+  }
+
+  /*****каталог*****/
+
+  .catalog_lots {
+    width: calc(100% - 330px);
+  }
+
+  .btn_filter {
+    display: none;
+  }
+
+  .react-numeric-input b {
+    display: none;
+  }
+
+  .catalog_auctions_wrap .auction_card:nth-child(n) {
+    display: block;
+  }
+
+  /*карточка товара*/
+
+  .card_top_slide {
+    height: 335px;
+  }
+
+  .card_bottom_slider .card_bottom_slide {
+    height: 100px;
+  }
+
+  .card_spec_item:nth-child(2n + 2) {
+    padding: 0 0 0 10px;
+    margin: 0 0 20px;
+  }
+
+  .resolve_issues_subtitle2 {
+    max-width: 260px;
+  }
+
+  .resolve_issues_link {
+    margin-right: 35px;
+    top: 0;
+  }
+
+  .card_hottest_auctions {
+    .auction_card:nth-child(n + 4) {
+      display: none;
+    }
+  }
+
+  /* страница услуги */
+
+  .sigle_services h2 {
+    font-size: 30px;
+  }
+
+  .services_trigger {
+    padding: 30px 0 15px;
+  }
+
+  .services_trigger_item:nth-child(n) {
+    width: calc(25% - 9px);
+    margin: 0 12px 24px 0;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+
+    &:nth-child(4n + 4) {
+      margin: 0 0 24px 0;
+    }
+  }
+
+  .services_trigger_title {
+    font-size: 16px;
+  }
+
+  .services_trigger_text {
+    font-size: 14px;
+  }
+
+  .confidence {
+    margin-bottom: 10px;
+  }
+
+  .confidence_item:nth-child(n) {
+    width: calc(25% - 18px);
+    margin: 0 24px 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+    border-radius: 5px;
+    padding: 25px;
+    min-height: 105px;
+
+    &:nth-child(4n + 4) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .form_question_left::after {
+    background-size: contain;
+    height: 50%;
+    top: 35px;
+    bottom: auto;
+  }
+
+  .form_question_phone a {
+    display: inline;
+  }
+
+  .form_question_title2 {
+    font-size: 32px;
+    max-width: 90%;
+  }
+
+  /*******
+    блог
+  ********/
+
+  .blog_page {
+    .blog_index_item:nth-child(n) {
+      margin: 0 24px 24px 0;
+
+      &:nth-child(3n + 3) {
+        margin: 0 0 24px;
+      }
+    }
+
+    .blog_index_item:nth-child(n + 3) {
+      display: block;
+    }
+
+    .catalog_lots_footer {
+      justify-content: space-between;
+    }
+
+    .catalog_lots_footer .lots_footer_number {
+      margin-right: 0;
+    }
+
+    .catalog_lots_sorting,
+    .lots_footer_info {
+      display: block;
+    }
+  }
+
+  /******
+    ЛК
+  *******/
+
+  .personal_area_wrap .persona {
+    width: calc(54% - 10px);
+    padding: 25px 0 5px 20px;
+    // margin-right: 15px;
+
+    .personal_name {
+      font-size: 30px;
+    }
+  }
+
+  .personal_area_wrap .personal_item_left {
+    width: 355px;
+  }
+
+  .personal_area_wrap .personal_item_right {
+    width: calc(100% - 365px);
+    margin-left: auto;
+  }
+
+  .personal_area_wrap .personal_item_right .man {
+    bottom: -5px;
+    object-fit: contain;
+    object-position: bottom;
+  }
+
+  .personal_area_wrap .auction {
+    // margin-right: 15px;
+  }
+
+  .personal_area_wrap .auction,
+  .personal_area_wrap .personal_item_balance {
+    width: calc(23% - 10px);
+    padding: 20px 10px;
+  }
+
+  .personal_area_wrap .personal_item_signature,
+  .personal_area_wrap .personal_item_published,
+  .personal_area_wrap .personal_item_link,
+  .personal_area_wrap .personal_item_signature {
+    width: calc(25% - 12px);
+    // margin: 0 15px 25px 0;
+    padding: 15px 20px 15px 20px;
+  }
+
+  .personal_area_wrap .personal_item_signature {
+    margin-right: 0;
+  }
+
+  .personal_area_wrap .item_link_title {
+    font-size: 24px;
+  }
+
+  .personal_area_wrap .personal_item_subtitle {
+    max-width: 100%;
+
+    br {
+      display: none;
+    }
+  }
+
+  .personal_area_wrap .personal_technical_support {
+    padding: 15px 20px 15px 20px;
+
+    .personal_item_subtitle {
+      max-width: 90%;
+    }
+  }
+
+  /*----Комната торгов---*/
+
+  .trading_room_left {
+    width: 45%;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .trading_room_left .card_top_slider .card_top_slide {
+    height: 485px;
+  }
+
+  .trading_room_right {
+    width: 55%;
+    padding: 15px 25px 10px 15px;
+    border-radius: 0 5px 5px 0px;
+  }
+
+  .room_price_item:nth-child(n) {
+    margin: 0;
+  }
+
+  .room_price_item:nth-child(n):nth-child(2n + 2) {
+    width: 40%;
+    margin: 0;
+  }
+
+  .room_price_item_num {
+    font-size: 24px;
+  }
+
+  .trading_room_spec_item:nth-child(n):nth-child(2n + 2) {
+    width: 40%;
+  }
+
+  .wrap_height {
+    height: 320px;
+  }
+
+  .trading_room_left .card_top_slider .card_top_slide {
+    border-radius: 0;
+  }
+
+  /****footer****/
+
+  .footer_contacts {
+    max-width: 250px;
+    margin-right: 20px;
+  }
+
+  .footer_phone {
+    font-size: 26px;
+  }
+
+  .footer_nav {
+    width: auto;
+  }
+
+  .footer_nav_list {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .footer_nav_title,
+  .arrow_bottom {
+    background: none;
+    border: none;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1299px) {
+  .header_top {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn_filter,
+  .mobail_contacts,
+  .reg_mobail_btn,
+  .btn_mobail,
+  .humb {
+    display: none;
+  }
+
+  .header_nav ul li a {
+    background-image: linear-gradient(to right, #007eee, #007eee 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+
+    &:before {
+      content: "";
+      background: #fff;
+      display: block;
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background-position: 0;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  .catalog_auctions_wrap {
+    .auction_card {
+      width: calc(33% - 13px);
+      margin: 0 24px 24px 0;
+
+      &:nth-child(3n + 3) {
+        margin: 0 0 24px;
+      }
+    }
+  }
+
+  .blog_page {
+    .blog_index_item {
+      width: calc(33.3333% - 16px);
+      margin: 0 24px 24px 0;
+
+      &:nth-child(3n + 3) {
+        margin: 0;
+      }
+    }
+  }
+
+  .header_contacts {
+    min-width: 565px;
+    width: 650px;
+  }
+}
+
+/**/

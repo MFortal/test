@@ -1,0 +1,583 @@
+.page_head {
+  padding: 50px 0 40px;
+  background: #f1f8ff;
+}
+
+.breadcrumb {
+  margin: 0 0 25px;
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+
+    li {
+      margin: 0 30px 0 0;
+      position: relative;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #007eee;
+      transition: all 0.3s ease-out;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 1px;
+        background: #6d6d6c;
+        top: 43%;
+        right: -25px;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+
+      &:hover {
+        color: #007eee;
+        text-shadow: 0 0 0.3px #007eee;
+      }
+    }
+
+    a {
+      color: #6d6d6c;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        color: #007eee;
+        text-shadow: 0 0 0.3px #007eee;
+      }
+    }
+  }
+}
+
+.page_titile {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 29px;
+  color: #1c1c1c;
+}
+
+/***********
+  catalog
+***********/
+
+.catalog_wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.catalog_filter {
+  width: 305px;
+  margin: 0 25px 0 0;
+}
+
+.catalog_filter_title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  color: #1c1c1c;
+  display: block;
+  margin: 0 0 35px;
+}
+
+.catalog_filter_item {
+  margin-bottom: 30px;
+
+  .react-numeric-input {
+    width: 100%;
+  }
+}
+
+.filter_item_title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 17px;
+  color: #1c1c1c;
+  display: block;
+  margin: 0 0 15px;
+}
+
+.react-select-container {
+  cursor: pointer;
+
+  .css-qbdosj-Input {
+    height: 30px;
+
+    input {
+      height: 30px;
+    }
+  }
+
+  input {
+    height: 25px !important;
+  }
+}
+
+.react-numeric-input {
+  input {
+    width: 100% !important;
+    height: 40px !important;
+    padding: 0 15px !important;
+    background: #f1f8ff !important;
+    border: 1px solid #f1f8ff !important;
+    border-radius: 7px !important;
+
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 22px !important;
+    color: #6d6d6c !important;
+  }
+
+  b:nth-of-type(1) {
+    position: absolute !important;
+    right: 15px !important;
+    width: 15px !important;
+    border-color: transparent !important;
+    border-style: solid !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    transition: all 0.1s ease 0s !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    top: 12px !important;
+    bottom: 50% !important;
+    border-radius: 2px 2px 0px 0px !important;
+    border-width: 1px 1px 0px !important;
+  }
+
+  b:nth-of-type(2) {
+    position: absolute !important;
+    right: 15px !important;
+    width: 15px !important;
+    border-color: transparent !important;
+    border-style: solid !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    transition: all 0.1s ease 0s !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    top: 26px !important;
+    bottom: 50% !important;
+    border-radius: 2px 2px 0px 0px !important;
+    border-width: 1px 1px 0px !important;
+  }
+}
+
+input,
+input[type="number"] {
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  background: #f1f8ff;
+  border: 1px solid #f1f8ff;
+  border-radius: 7px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #6d6d6c;
+}
+
+.half_input {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  .react-numeric-input {
+    width: 48%;
+
+    b {
+      display: none;
+    }
+
+    input {
+      -webkit-appearance: none;
+      appearance: none;
+      -moz-appearance: textfield;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.date_inputs {
+  .react-datepicker__input-container {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url(/images/date_input.svg) no-repeat;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+      pointer-events: none;
+    }
+  }
+
+  input {
+    margin: 0 0 10px;
+    cursor: pointer;
+  }
+}
+
+.item_object_status {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 9px 12px;
+  min-height: 40px;
+  width: 100%;
+  margin: 0 0 10px;
+
+  background: #f1f8ff;
+  border: 1px solid #f1f8ff;
+  border-radius: 7.2px;
+  transition: all 0.3s ease-out;
+}
+
+.item_object_status:hover,
+.status_active {
+  color: #ffffff;
+  background: #007eee;
+  cursor: pointer;
+}
+
+/**********
+  checkbox
+***********/
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1c1c1c;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background: #f5f5f7;
+  border: 1px solid #6d6d6c;
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 2px 1px rgba(38, 39, 40, 0.2);
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #f7f5f5;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #007eee;
+}
+
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+  background: #007eee;
+}
+
+.control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.control_indicator:after {
+  box-sizing: unset;
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+
+.control-checkbox .control_indicator:after {
+  left: 8px;
+  top: 2px;
+  width: 6px;
+  height: 13px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
+
+/****************
+  _end checkbox_
+*****************/
+
+/*catalog_lots*/
+
+.catalog_lots {
+  width: calc(100% - 330px);
+}
+
+.catalog_lots_sorting,
+.catalog_lots_head {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.catalog_lots_head {
+  margin: 0 0 17px;
+}
+
+.catalog_lots_number {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6d6d6c;
+}
+
+.sorting_title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1c1c1c;
+  display: block;
+  margin: 0 12px 0 0;
+}
+
+.sorting_price {
+  margin: 0 15px 0 0;
+  min-width: 120px;
+}
+
+// .catalog_lots_sorting {
+//   margin-left: auto;
+//   margin-right: 25px;
+// }
+
+.catalog_lots_display {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.lots_display_map {
+  display: block;
+  margin: 0 14px 0 0;
+  width: 16px;
+  height: 22px;
+  background: url(/images/display_map.svg) no-repeat;
+  cursor: pointer;
+}
+
+.lots_display_box {
+  display: block;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background: url(/images/display_box.svg) no-repeat;
+}
+
+.catalog_auctions_wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/*catalog_lots_footer*/
+
+.catalog_lots_footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .react-select-container {
+    min-width: 50px;
+    margin: 0 5px 0 0;
+  }
+
+  .lots_footer_number {
+    display: flex;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #6d6d6c;
+  }
+}
+
+/*paginations*/
+
+.paginations_wrap {
+  margin: 10px auto 0;
+  width: fit-content;
+}
+
+.paginations {
+  ul {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    li {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: #007eee;
+    }
+
+    .current {
+      display: block;
+      margin: 0 8px;
+      transition: all 0.3s ease-out;
+    }
+
+    a {
+      margin: 0 8px;
+      color: #1c1c1c;
+      transition: all 0.3s ease-out;
+    }
+
+    a:hover,
+    .current {
+      color: #007eee;
+    }
+
+    .prev,
+    .next {
+      width: 18px;
+      height: 18px;
+      display: block;
+      transition: all 0.3s ease-out;
+    }
+
+    .prev {
+      margin: 0 15px 0 0;
+      background: url(/images/prev_pagi.svg) no-repeat;
+
+      &:hover {
+        transform: translateX(-3px);
+      }
+    }
+
+    .next {
+      margin: 0 0 0 15px;
+      background: url(/images/nav_pagi.svg) no-repeat;
+
+      &:hover {
+        transform: translateX(3px);
+      }
+    }
+  }
+}
+
+.lots_footer_info {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6d6d6c;
+}
+
+/***************
+  catalog_map
+**************/
+
+.catalog_map {
+  position: relative;
+  border: 1px solid #d1d1d5;
+  height: 700px;
+  overflow: hidden;
+
+  .catalog_map_lots {
+    width: 352px;
+    height: 100%;
+    padding: 25px 0 12px 10px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: all 0.4s linear;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 5px;
+      height: 100%;
+      top: 0;
+      right: -5px;
+      background: #fff;
+    }
+  }
+
+  .catalog_map_active {
+    left: 0;
+  }
+
+  .catalog_map_head {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  .catalog_map_clouse {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(/images/clouse.svg) no-repeat;
+    cursor: pointer;
+  }
+
+  .catalog_auctions_wrap {
+    flex-flow: column;
+    height: 100%;
+    padding-right: 10px;
+    overflow: auto;
+
+    .auction_card {
+      width: 100%;
+      margin: 0 0 25px 0;
+    }
+  }
+}
+
+.catalog_map_points {
+  img {
+    cursor: pointer;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/**/

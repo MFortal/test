@@ -1,0 +1,346 @@
+/**********
+  my_lots
+***********/
+
+.my_lots_title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0c0b0b;
+  display: block;
+  margin: 0 0 20px;
+}
+
+.my_lots_tabs {
+  margin: 0 0 30px;
+
+  .scroll_wrap {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .lots_tabs_item {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0c0b0b;
+    margin: 0 40px 0 0;
+    opacity: 0.3;
+    transition: all 0.3s ease-out;
+
+    display: flex;
+    gap: 5px;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .active_tabs_item {
+    opacity: 1;
+  }
+}
+
+.my_lots_accordion {
+  background: #f5f5f7;
+  border: 1px solid #e9ecef;
+  box-shadow: 0px 1px 2px rgba(51, 65, 86, 0.08);
+  border-radius: 14px;
+}
+
+.lots_accordion_head {
+  padding: 18px;
+
+  .lots_accordion_title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1e293b;
+    display: block;
+    margin: 0 0 2px;
+  }
+
+  .lots_accordion_subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #64748b;
+  }
+}
+
+.accordion_box_title {
+  background: #f9fafb;
+  border-top: 1px solid #dde0e5;
+  border-bottom: 1px solid #dde0e5;
+  padding: 14px 18px;
+  display: flex;
+  flex-flow: row;
+
+  .accordion_box_title_item {
+    font-weight: 700;
+    font-size: 13.5154px;
+    line-height: 18px;
+    color: rgba(100, 116, 139, 0.7);
+  }
+
+  .accordion_box_title_item:nth-child(1) {
+    width: 49%;
+  }
+
+  .accordion_box_title_item:nth-child(2) {
+    width: 17%;
+  }
+
+  .accordion_box_title_item:nth-child(3) {
+    width: 17%;
+  }
+
+  .accordion_box_title_item:nth-child(4) {
+    width: 17%;
+  }
+}
+
+/*************
+    my_lot 
+**************/
+
+.my_lot {
+  border-bottom: 0.9px solid #dee2e6;
+}
+
+.my_lot:last-child {
+  border: none;
+
+  .my_lot_content {
+    border-radius: 0 0 14px 14px;
+  }
+}
+
+.my_lot_wrap {
+  background: url(/images/accordion__button.png) calc(100% - 18px) 50% no-repeat
+    #f5f5f7;
+  padding: 14px 18px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 0.9px solid #dee2e6;
+
+  &:hover {
+    background-color: #f3f7ff;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+    border-radius: 0 0 14px 14px;
+  }
+
+  .my_lot_mobail_title {
+    display: none;
+  }
+}
+
+.accordion__button[aria-expanded="true"] .my_lot_wrap {
+  background: url(/images/accordion__button_open.png) calc(100% - 18px) 50%
+    no-repeat #f5f5f7;
+}
+
+.my_lot_name {
+  width: 49%;
+}
+
+.my_lot_name_wrap {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding-right: 20px;
+
+  .my_lot_name_icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+
+    overflow: hidden;
+    margin-right: 25px;
+
+    img {
+      object-position: center;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  .my_lot_name_title {
+    width: calc(100% - 60px);
+  }
+
+  .my_lot_title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.901024px;
+    color: #1e293b;
+  }
+
+  .my_lot_name___date {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #0c0b0b;
+  }
+}
+
+.my_lot_days {
+  width: 17%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 162.5%;
+  letter-spacing: -0.901024px;
+  color: #1e293b;
+}
+
+.my_lot_assigned_cost,
+.my_lot_proposed_price {
+  width: 17%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1c1c1c;
+}
+
+.my_lot_content {
+  background: #f3f7ff;
+  border-top: 1px solid #dee2e6;
+  padding: 30px 18px;
+
+  .my_lot_status {
+    padding-left: 50px;
+    position: relative;
+
+    font-weight: 500;
+    font-size: 17.5px;
+    line-height: 25px;
+    color: #171c26;
+    margin-bottom: 45px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+    }
+
+    &::before {
+      top: -3px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 0px 1.25px rgba(152, 161, 178, 0.1),
+        0px 1.25px 5px rgba(69, 75, 87, 0.12), 0px 0px 2.5px rgba(0, 0, 0, 0.08);
+    }
+
+    &::after {
+      top: 37px;
+      left: 15px;
+      background: #d5dbe5;
+      width: 2.5px;
+      height: 20px;
+    }
+
+    &:last-child {
+      margin: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.my_lot_status_name {
+  padding-right: 10px;
+}
+
+.my_lot_status_prise {
+  font-weight: 700;
+  color: #007eee;
+}
+
+/****************
+  status_color
+****************/
+
+.status_bet_is_made::before {
+  background: #d0cffc;
+}
+
+.status_initial_cost::before {
+  background: #d0cffc;
+}
+
+.status_rate_increased::before {
+  background: #6fa2ff;
+}
+
+.status_winning_amount::before {
+  background: #a3d562;
+}
+
+.status_bail_paid::before {
+  background: #d0cffc;
+}
+
+.outbid_status::before {
+  background: #ffa8b2;
+}
+
+.status_rate_up::before {
+  background: #6fa2ff;
+}
+
+/********************
+  end status_color
+********************/
+
+/***************
+    my_auctions
+****************/
+
+.my_auctions {
+  .my_lot_status {
+    font-weight: 500;
+    font-size: 17.5px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    color: #171c26;
+  }
+
+  .my_lot_status_prise {
+    color: #171c26;
+  }
+
+  .boost_btn {
+    font-weight: 700;
+    font-size: 17.5px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    text-decoration-line: underline;
+    color: #007eee;
+    margin-left: 12px;
+    cursor: pointer;
+
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      text-shadow: 0 0 0.3px #007eee;
+    }
+  }
+}
+
+/**/

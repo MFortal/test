@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+/*GLOBAL STYLE_____________________________
+    ___________________________________________*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Gilroy", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #1c1c1c;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.grid_container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 39px;
+  color: #1c1c1c;
+}
+
+/*- input global -*/
+
+*input {
+  outline: none !important;
+}
+
+*button {
+  outline: none !important;
+  border: none;
+}
+
+*input::placeholder {
+  color: #8e8b8b;
+}
+
+//делает поле ввода белым
+input:-webkit-autofill {
+  color: #ffffff !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.error {
+  margin-left: 6px;
+  margin-top: 3px;
+  color: red;
+}
+
+select:focus,
+select:hover,
+option:hover,
+option:focus {
+  border: none;
+  outline: none;
+  border: transparent;
+}

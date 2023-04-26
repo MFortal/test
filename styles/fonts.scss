@@ -1,0 +1,75 @@
+/*Arial*/
+@font-face { 
+    font-family: "Arial";
+    src: url("../public/fonts/ArialBold.eot");
+    src: url("../public/fonts/ArialBold.eot?#iefix")format("embedded-opentype"),
+    url("../public/fonts/ArialBold.woff") format("woff"),
+    url("../public/fonts/ArialBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+/*--Gilroy--*/
+
+@font-face { 
+    font-family: "Gilroy";
+    src: url("../public/fonts/GilroyRegular.eot");
+    src: url("../public/fonts/GilroyRegular.eot?#iefix")format("embedded-opentype"),
+    url("../public/fonts/GilroyRegular.woff") format("woff"),
+    url("../public/fonts/GilroyRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face { 
+    font-family: "Gilroy";
+    src: url("../public/fonts/GilroyMedium.eot");
+    src: url("../public/fonts/GilroyMedium.eot?#iefix")format("embedded-opentype"),
+    url("../public/fonts/GilroyMedium.woff") format("woff"),
+    url("../public/fonts/GilroyMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+
+@font-face { 
+    font-family: "Gilroy";
+    src: url("../public/fonts/GilroySemiBold.eot");
+    src: url("../public/fonts/GilroySemiBold.eot?#iefix")format("embedded-opentype"),
+    url("../public/fonts/GilroySemiBold.woff") format("woff"),
+    url("../public/fonts/GilroySemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+
+
+@font-face { 
+    font-family: "Gilroy";
+    src: url("../public/fonts/GilroyBold.eot");
+    src: url("../public/fonts/GilroyBold.eot?#iefix")format("embedded-opentype"),
+    url("../public/fonts/GilroyBold.woff") format("woff"),
+    url("../public/fonts/GilroyBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face { 
+    font-family: "Gilroy";
+    src: url("../public/fonts/GilroyBlack.eot");
+    src: url("../public/fonts/GilroyBlack.eot?#iefix")format("embedded-opentype"),
+    url("../public/fonts/GilroyBlack.woff") format("woff"),
+    url("../public/fonts/GilroyBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+}
+
+
+/*Gilroy_BTN*/
+
+@font-face { 
+    font-family: "Gilroy_BTN";
+    src: url("../public/fonts/button-fonts/subset-Gilroy-Bold.woff") format("woff"),
+    url("../public/fonts/button-fonts/subset-Gilroy-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
